@@ -7,7 +7,13 @@ download.file("https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_p
 unzip(temp, "household_power_consumption.txt")
 data <- read.table("household_power_consumption.txt", sep=";", na.strings = "?", colClasses = c("character", "character", rep ("numeric", 7)), header=TRUE)
 #importing as character was necessary to get strptime to work
+#next time try using  stringsAsFactors = FALSE as default
 ndata <- data     #making copy to work with
+
+#####better way to download file#####
+#url <- 'https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip'
+#download.file(url = url, 'plotting_data.zip')
+#unzip('plotting_data.zip')   ## unzip and save 
 
 #Examine Data
 head(ndata)

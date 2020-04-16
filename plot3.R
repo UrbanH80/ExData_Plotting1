@@ -22,7 +22,7 @@ sdata$datetime <- strptime(paste(sdata$Date,sdata$Time), format = "%d/%m/%Y %H:%
 
 
 #Build plot
-plot(sdata$datetime, sdata$Sub_metering_1, type = "l", ylab = "Global Active Power (kilowatts)", xlab = "") 
+plot(sdata$datetime, sdata$Sub_metering_1, type = "l", ylab = "Energy sub metering", xlab = "") 
 lines(sdata$datetime, sdata$Sub_metering_2, type = "l", col = "red") 
 lines(sdata$datetime, sdata$Sub_metering_3, type = "l", col = "blue") 
 legend("topright", pch = "___", col = c("black", "blue", "red"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
